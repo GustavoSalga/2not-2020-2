@@ -10,7 +10,6 @@
         // Inicializar variáveis diretamente é má prática de
         // programação
         'use strict'
-        let ano = parseInt(prompt('iInforme um Ano:'))
                 /*
             Peça ao usuário para informar um ano e determine
             se é bissexto pela regra:
@@ -27,10 +26,34 @@
             2000: bissexto
             2013: não é
       */
-        if(isNaN(ano)){
-        alert('ERRO o valor informado NÃO É um número inteiro válido')
+     /*
+        let ano = parseInt(prompt('Informe um Ano maior ou igual a 1582:'))
+        if(isNaN(ano) || ano < 1582){
+        alert('ERRO: o ano informado é inválido')
     }
-        else if ()
+        // testando a divisibilidade do ano por 400, com resto zero
+        else if (ano % 400 == 0) {
+            alert('O ano informado é BISSEXTO')
+        }
+        // ano divide exatamente por 4 e não divide exatamente por 100
+        else if (ano % 4 == 0 && ano % 100 !== 0)
+            alert ('O ano é BISSEXTO')
+        else {
+            alert('O ano informado não é BISSEXTO')
+        }
+        */
+       let ano = parseInt(prompt('Informe um Ano maior ou igual a 1582:'))
+        if(isNaN(ano) || ano < 1582){
+        alert('ERRO: o ano informado é inválido')
+    }
+        // nessa forma agrupada, é testado primeiro a condição de "e (&&)"
+        // else if (ano % 400 == 0 || ano % 4 == 0 && ano % 100 !== 0) {
+        else if (ano % 400 == 0 || (ano % 4 == 0 && ano % 100 !== 0)) {
+            alert('O ano informado é BISSEXTO')
+        }
+        else {
+            alert('O ano informado não é BISSEXTO')
+        }
     </script>
 </head>
 <body>
