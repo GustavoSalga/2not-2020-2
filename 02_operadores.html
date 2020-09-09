@@ -3,75 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modelo de documento HTML</title>
     <script>
-    // 'use strict' impede que variáveis sejam declaradas sem o uso de let, var ou const
-    // inicializar variáveis diretamente é má prática na programação
-    'use strict'
-    
-    // Declaração de variáveis em Java Script
-    let a
-    let b
-    let c
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
 
-    // declarando 3 variáveis de uma vez
-    let x, y, z
+        /*
+            OPERADORES RELACIONAIS
+            >   Maior que
+            <   Menor que
+            >=  Maior ou igual que
+            <=  Menor ou igual que
+        */
+                
+        let a = 3, b = 6, c = '6' // Operador de atribuição
 
-    let v1 = 'Teste'              // Tipo 'String'
-    let v2 = 2.75                 // Tipo 'number'
-    let v3 = true                 // Tipo 'boolean'
-    let v4 = 70                   // Tipo 'number'
-    let v5 = "Tanto Faz"          // Tipo 'String'
-    let v6                        // Tipo Undefined  
-    let v7 = '365'                // Tipo 'String'  
+        // Operador de igualdade
+        // Testando a igualdade de duas variáveis
+        // Para testar a igualdade, usamos DOIS sinais de igual
+        //alert(a == b)     // false
+        //alert(b == c)       // true
 
-    // Mudando o valor da variável V2
-    v2 = 'Batata'               // Tipo 'String'
+        // Operador de igualdade estrita ou
+        // "exatamente igual"
+        //alert(b === c)      // false
 
-    // Declarando as variáveis com valor e sem valor
-    let q1 = 5, q2 = 7, q3 = '4', res 
+        // Operador de diferença
+        //alert(a != b)   // true
+        //alert(b != c)
 
-    // Operadores aritméticos
+        // Operador de diferença estrita ("exatamente diferente")
+        //alert(b !== c)
+
+        /*
+            OPERADORES LÓGICOS
+            &&  E lógico (and)
+            ||  OU lógico (or)
+            !   NÃO lógico (not)
+        */
+       //alert(5 > 4 && 2 > 1)      // true
+       //alert(5 < 4 && 2 > 1)
+
+       //alert(5 > 4 || 2 > 1)        // true
+       //alert(5 < 4 || 2 > 1)        // true
+
+       /*
+            CONVERSÃO DE NÚMEROS PARA BOOLEANO
+            0 -> será convertido para false
+            Qualquer valor não-zero -> convertido para true
+       */
+       
+       // O operador not (!) tem uma precedência muita alta
+       // (é interpretado primeiro) e, por isso, quase sempre
+       // é usado com parênteses
+       alert(!(5 < 4 && 2 > 1))
+
+       // PRECEDÊNCIA DOS OPERADORES LÓGICOS
+       // 1º !
+       // 2º &&
+       // 3º ||   
         
-    res = q1 - q2               // Subtração de inteiros
-    res = q1 - q3               // Subtração convertendo a String p/ N°
-    res = q1 - v2               // Alert da 'NaN = Not a Number'
-    
-    res = q1 * q2               // Multiplicação = 35
-    res = q1 * q3               // Multiplicação = 20
-    res = q1 * v2               // Multiplicação = NaN
-
-    res = q1 / q2               // Divisão = 0.7142857143
-    res = q1 / q3               // Divisão = 1.25
-    res = q1 / v2               // Divisão = NaN
-    
-    // No sinal de + o comportamento muda ao se utilizar String + Número
-    // acontece uma concatenação
-    res = q1 + q2               // Adição = 12
-    res = q1 + q3               // Adição soma o Number seguido do String = 54
-    res = q1 + v2               // Adição soma o Number seguido do String = 5batata
-   
-   // Forçando a soma de um n° e uma string com resultado numério válido
-   
-   // 1° forma: usando Number()
-   res = q1 + Number(q3)
-
-   // 2° forma usando parseInt ()
-   res = q1 + parseInt(q3)
-
-   // Potenciação
-   res = q1 ** q2           // = 78125
-   res = q1 ** q3           // = 625
-   res = q1 ** v2           // NaN
-
-   // Outra forma de potenciação (forma antiga)
-   res = Math.pow(q1, q2)          // = 78125
-
-   // Operador de módulo (resto da divisão)
-   res = 5 % 2             // resto da divisão = 1
-   res = 11 % 3             // resto da divisão = 2
-   res = 8 % 2              // resto da divisão = 0             
-   </script>
+    </script>
 </head>
 <body>
     
