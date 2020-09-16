@@ -23,8 +23,38 @@
             FEVEREIRO: 28 dias (29 em anos bissextos)
         */
 
-        let num = parseFloat(prompt('Informe um número inteiro de 1 a 12:'))
+        let mes = parseInt(prompt('Informe um número inteiro de 1 a 12:'))
 
+        if (isNaN(mes)) {
+            alert('ERRO: o mês informado é inválido')
+        }
+        else {
+            switch(mes) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    alert('O mês informado tem 31 dias')
+                    break
+                
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    alert('O mês informado tem 30 dias')
+                    break
+
+                case 2:
+                    alert('O mês informado tem 28 (ou 29 em anos bissexto).')
+                    break
+
+                default: 
+                    alert('O mês informado é inválido')
+            }
+        }
 
     </script>
 </head>
