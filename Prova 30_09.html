@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        for(let i = 400; i >= 1; i--) { // Começa diminuindo de 1 em 1 do 400 até o 1
+            if (i % 29 == 0) { // Verificar onde estão as lombofaixas quando divisão por 29 é igual a 0
+                document.write(`Lombofaixa no KM ${i}<br>`) // printar as lombofaixas
+            }      
+        }    
+        let = km
+        do {
+            km = parseInt(prompt('Informe um número entre 1 e 400:')) // Abrir o prompt para o usuário digitar um número
+        } while (isNaN(km) || km < 1 || km > 400) // Verificando se a condição está dentro de 1 a 400
+
+            switch (km) {                              
+                case 92:
+                case 177:
+                case 291:
+                case 388:
+                    alert('Megalojas do Magazine Luiza') // Os cases vazios acima verificam se existem megalojas magazine no km informado
+                    break // para parar a "descida do case"
+                case 153:
+                case 356:
+                    alert('Drive-thru dos Calçados Rafarillo') //  Os cases vazios acima verifica se existe Drive-thru dos Calçados Rafarillo
+                    break // para parar a "descida do case"
+                case 187:
+                    alert('Posto de recarga da Viação São José') //  Os cases vazios acima verifica se existe Posto de recarga da Viação São José
+                    break // para parar a "descida do case"
+                case 210:
+                    alert('Filial da Padaria Estrela') //  Os cases vazios acima verifica se existe Padaria Estrela
+                    break // para parar a "descida do case"
+                case 314:
+                    alert('Fábrica do Jubileu do Amendoim') //  Os cases vazios acima verifica se existe Jubileu do Amendoim
+                    break // para parar a "descida do case"
+                case 367:
+                    alert('Franca AcquaParque Unidade II') //  Os cases vazios acima verifica se existe AcquaParque Unidade II
+                    break // para parar a "descida do case"
+                default: // Qualquer outro km informado que não estiver descrito acima entra nessa condição
+                    alert('Vapo, tem nada aqui não. Segue reto toda vida,meu fii.') // Printar que o km informado não tem nada francano
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
